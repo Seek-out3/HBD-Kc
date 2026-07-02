@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>★HAPPY BIRTHDAY CASSANDRA★</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Screen 1 : Intro -->
+     <section class="screen active" id="screen-intro">
+           <img src="cute.jpg" alt="" width="150">
+      <h1>I developed something for you, Cassandra (｡- .•) </h1>
+      <p>Happy birthday to my different womb sister. Go on, open it.😀</p>
+      <button onclick="goTo('screen-passcode')">Open it!</button>
+     </section>
+
+
+    <!-- Screen 2 : Passcode -->
+   <section id="screen-passcode" class="screen">
+      <h1>Enter the Passcode😊</h1>
+      <p class="subtitle">Hint: What's Today?? (DDMM) </p>
+      <div class="dots" id="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <div class="keypad" id="keypad">
+        <button class="key" onclick="pressKey('1')">1</button>
+        <button class="key" onclick="pressKey('2')">2</button>
+        <button class="key" onclick="pressKey('3')">3</button>
+        <button class="key" onclick="pressKey('4')">4</button>
+        <button class="key" onclick="pressKey('5')">5</button>
+        <button class="key" onclick="pressKey('6')">6</button>
+        <button class="key" onclick="pressKey('7')">7</button>
+        <button class="key" onclick="pressKey('8')">8</button>
+        <button class="key" onclick="pressKey('9')">9</button>
+        <button class="key" onclick="clearCode()">C</button>
+        <button class="key" onclick="pressKey('0')">0</button>
+        <button class="key" onclick="checkCode()">OK</button>
+      </div>
+   </section>
+
+   <!-- Screen 3 : Wrong Code-->
+    <!--<div id="screen-wrong" class="screen hidden">
+      <div class="card text-center">
+        <h1 class="error-text">WRONG PASSWORD</h1>
+        <p>Oops, try again!</p>
+        <button class="btn mt-4" onclick="goTo('screen-passcode')">Try again</button>
+      </div>
+    </div>-->
+
+    <!-- Screen 4 : I Miss you -->
+     <section id="screen-miss-you" class="screen">
+      <div class="card text-center">
+        <h1>♡♡ Virtual hug for you! ♡♡</h1>
+        <img src="us.jpg" alt="" width="250">
+        <h2 class="purple-text">I MISS YOU SO MUCH🍓</h2>
+        <p>Wish I could hand this to you in person. Consider this a hug through the screen. 🙃</p>
+        <button class="btn mt-4" onclick="goTo('screen-bday')">Tap here to see</button>
+      </div>
+    </section>
+
+     <!-- Screen 4 : Happy Birthday-->
+      <div id="screen-bday" class="screen">
+      <div id="confetti-layer"></div>
+        <div class="card text-center">
+           <img src="bg.jpg" alt="" width="200">
+           <h1>Happy Birthday, ★Cassandra★ !!</h1>
+           <p>I am your gift.😜</p>
+           <button class="btn mt-4" onclick="goTo('screen-wish')">Read my wish for you</button>
+        </div>
+      </div>
+
+      <!-- Screen 5 : WishList-->
+       <section id="screen-wish" class="screen">
+        <!--
+        <svg class="heart-bg" viewport="0 0 200 180" preserveAspectRatio="xMidYMid meet">
+          <path id="heart-path" d="M100, 170
+          C40,120 10,80 10,50
+          C10,20 35,5 60,5
+          C80,5 95,15 100,35
+          C105,15 120,5 140,5
+          C165,5 190,20 190,50
+          C190,80 160,120 100,170 Z" />
+        </svg>
+        -->
+        <div class="card letter">
+          <h2>♡♡ My wish for you ♡♡</h2>
+          <p>Happiest bday bestie!😍</p>
+          <p>I wish you all the happiness and success in your life.</p>
+          <p>Thankyou for always being there for me, listening to me, and being my comfort person.😎</p>
+          <p>Thanks for the memories, the dumb jokes, and the real talks.😄</p>
+          <p>May the Lord grant the desires of your heart.😋</p>
+          <p>Love you to the moon and back.😘</p>
+          <p class="me">_for ever your person
+          <br /> ♡By Kianna♡</p>
+        </div>
+        <button class="ghost" onclick="goTo('screen-intro')">Replay</button>
+       </section>
+  </div>
+   
+  <script src="script.js"></script>
+</body>
+</html>
+<!--
+
+-->
